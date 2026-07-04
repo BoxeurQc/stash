@@ -18,11 +18,8 @@ env:
   COMPILER_IMAGE: ghcr.io/stashapp/compiler:14
 
 jobs:
-  # Job 1: Generate code and build UI
-  # Runs natively (no Docker) — go generate/gqlgen and node don't need cross-compilers.
-  # Produces artifacts (generated Go files + UI build) consumed by test and build jobs.
-  generate:
-    runs-on: ubuntu-24.04
+  build:
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v6
       with:
