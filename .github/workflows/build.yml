@@ -93,7 +93,7 @@ jobs:
   # Runs natively (no Docker) — only needs Go + GCC (for CGO/SQLite), both on ubuntu-22.04.
   # Runs in parallel with the build matrix jobs.
   test:
-    needs: generate
+    needs: build
     runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v6
